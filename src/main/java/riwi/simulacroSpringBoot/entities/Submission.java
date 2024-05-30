@@ -16,11 +16,14 @@ public class Submission {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long submission_id;
+
     @Column(nullable = false)
     @Lob
     private String content;
+
     @Column(nullable = false)
     private LocalDateTime submission_date;
+
     @Column(nullable = false)
     private double grade;
 
