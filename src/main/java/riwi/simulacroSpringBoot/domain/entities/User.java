@@ -1,11 +1,11 @@
-package riwi.simulacroSpringBoot.entities;
+package riwi.simulacroSpringBoot.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import riwi.simulacroSpringBoot.enums.Role;
+import riwi.simulacroSpringBoot.util.enums.Role;
 
 import java.util.List;
 @Entity

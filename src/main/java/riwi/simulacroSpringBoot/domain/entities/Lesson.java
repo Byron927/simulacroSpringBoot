@@ -1,4 +1,4 @@
-package riwi.simulacroSpringBoot.entities;
+package riwi.simulacroSpringBoot.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

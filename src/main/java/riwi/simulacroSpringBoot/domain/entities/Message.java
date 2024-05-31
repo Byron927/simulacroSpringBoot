@@ -1,4 +1,4 @@
-package riwi.simulacroSpringBoot.entities;
+package riwi.simulacroSpringBoot.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -17,6 +17,7 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
     @Column(length = 100, nullable = false)
+
     private String message_content;
     @Column(nullable = false)
     private LocalDateTime date;
@@ -32,5 +33,4 @@ public class Message {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "course_id", referencedColumnName = "id")
     private Course course;
-
 }

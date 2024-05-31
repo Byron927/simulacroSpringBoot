@@ -1,7 +1,7 @@
 package riwi.simulacroSpringBoot.api.dto.response.used_responses;
 
-import riwi.simulacroSpringBoot.entities.Course;
-import riwi.simulacroSpringBoot.entities.User;
+import riwi.simulacroSpringBoot.domain.entities.Course;
+import riwi.simulacroSpringBoot.domain.entities.User;
 
 import java.time.LocalDateTime;
 

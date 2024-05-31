@@ -1,8 +1,8 @@
 package riwi.simulacroSpringBoot.api.dto.response.custom_responses;
 
-import riwi.simulacroSpringBoot.entities.Enrollment;
-import riwi.simulacroSpringBoot.entities.Lesson;
-import riwi.simulacroSpringBoot.entities.Message;
+import riwi.simulacroSpringBoot.domain.entities.Enrollment;
+import riwi.simulacroSpringBoot.domain.entities.Lesson;
+import riwi.simulacroSpringBoot.domain.entities.Message;
 
 import java.util.List;
 

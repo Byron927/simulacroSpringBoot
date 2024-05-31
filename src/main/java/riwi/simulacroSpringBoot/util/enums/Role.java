@@ -1,4 +1,4 @@
-package riwi.simulacroSpringBoot.enums;
+package riwi.simulacroSpringBoot.util.enums;
 
 public enum Role {
     INSTRUCTOR, STUDENT

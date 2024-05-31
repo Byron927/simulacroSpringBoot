@@ -1,4 +1,4 @@
-package riwi.simulacroSpringBoot.entities;
+package riwi.simulacroSpringBoot.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -19,6 +19,7 @@ public class Assignment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(length = 100, nullable = false)
     private String assignment_title;
 
@@ -36,5 +37,4 @@ public class Assignment {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "lesson_id", referencedColumnName = "id")
     private Lesson lesson;
-
 }

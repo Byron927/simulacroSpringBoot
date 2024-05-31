@@ -1,6 +1,6 @@
 package riwi.simulacroSpringBoot.api.dto.response.custom_responses;
 
-import riwi.simulacroSpringBoot.entities.Course;
+import riwi.simulacroSpringBoot.domain.entities.Course;
 
 import java.time.LocalDateTime;
 
