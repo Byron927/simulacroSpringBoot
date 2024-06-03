@@ -29,9 +29,8 @@ public class UserReq {
 
     @NotBlank(message = "Full name is required")
     @Size(max = 50, message = "Full name must not exceed {max} characters.")
-
     private String full_name;
-    @NotNull(message = "Role is required.")
 
+    @NotNull(message = "Role is required.")
     private Role role;
 }

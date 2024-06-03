@@ -1,10 +1,7 @@
 package riwi.simulacroSpringBoot.domain.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import riwi.simulacroSpringBoot.util.enums.Role;
 
 import java.util.List;
@@ -27,24 +24,33 @@ public class User {
     private String full_name;
     private Role role;
 
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user",
             cascade = CascadeType.ALL,orphanRemoval = false)
     private List<Enrollment> enrollments;
 
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user",
             cascade = CascadeType.ALL,orphanRemoval = false)
     private List<Course> courses;
 
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "sender_id",
             cascade = CascadeType.ALL,orphanRemoval = false)
     private List<Message> senderMessages;
 
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "receiver_id",
             cascade = CascadeType.ALL,orphanRemoval = false)
     private List<Message> receiverMessages;
 
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user",
             cascade = CascadeType.ALL,orphanRemoval = false)
     private List<Submission> submissions;
-
 }

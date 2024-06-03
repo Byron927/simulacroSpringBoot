@@ -19,5 +19,4 @@ public class LessonResp {
     private String content;
     private Course course;
     private List<Assignment> assignment;
-
 }

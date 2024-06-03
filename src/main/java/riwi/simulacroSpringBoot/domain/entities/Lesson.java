@@ -1,10 +1,7 @@
 package riwi.simulacroSpringBoot.domain.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
@@ -29,6 +26,8 @@ public class Lesson {
     @JoinColumn(name = "course_id", referencedColumnName = "id")
     private Course course;
 
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "lesson",
             orphanRemoval = false, cascade = CascadeType.ALL)
     private List<Assignment> assignment;

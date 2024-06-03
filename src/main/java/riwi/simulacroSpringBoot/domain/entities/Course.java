@@ -1,10 +1,7 @@
 package riwi.simulacroSpringBoot.domain.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
@@ -29,14 +26,20 @@ public class Course {
     @JoinColumn(name = "instructor_id", referencedColumnName = "id")
     private User user;
 
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "course",
             orphanRemoval = false, cascade = CascadeType.ALL)
     private List<Lesson> lessons;
 
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "course",
             orphanRemoval = false, cascade = CascadeType.ALL)
     private List<Message> messages;
 
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "course",
             orphanRemoval = false, cascade = CascadeType.ALL)
     private List<Enrollment> enrollments;

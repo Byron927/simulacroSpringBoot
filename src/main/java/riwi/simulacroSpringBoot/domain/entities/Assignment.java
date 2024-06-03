@@ -1,10 +1,7 @@
 package riwi.simulacroSpringBoot.domain.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -30,6 +27,8 @@ public class Assignment {
     @Column(nullable = false)
     private LocalDateTime due_date;
 
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "assignment",
     orphanRemoval = false, cascade = CascadeType.ALL)
     private List<Submission> submission;
